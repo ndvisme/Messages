@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "app/.venv/bin/python3",
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "black"
+}
