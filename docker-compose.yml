@@ -6,6 +6,8 @@ services:
     restart: always
     ports:
       - '5051:5051'
+    volumes:
+      - ./app:/Messages_app
     depends_on:
       - messages_db
     environment:
@@ -20,3 +22,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: 
