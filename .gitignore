@@ -4,3 +4,4 @@
 .env.production.local
 
 __pycache__/
+.DS_Store
