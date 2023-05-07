@@ -10,7 +10,7 @@ db_wrap.connect_to(app)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "OMG!"
 
 
 if __name__ == "__main__":
