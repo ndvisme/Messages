@@ -12,5 +12,5 @@ class Message(db.Model):
     repeat = db.Column(db.Enum(repeat), nullable=False)
     dest_groups_id = db.Column(db.String(200), nullable=False)
     time_to_send = db.Column(db.String(120), nullable=False)
-    message_data = db.Column(db.String(200), nullable=False)
-    message_title = db.Column(db.String(80), nullable=False)
+    message_data = db.Column(db.String(500), nullable=False)
+    message_title = db.Column(db.String(80), nullable=True)
