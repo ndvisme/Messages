@@ -43,20 +43,10 @@
    docker exec -it messages_api bash
    ```
 
-3.1 To run all the tests in the project run 'messages_api' shell run the following command:
-
-```
-python -m pytest
-```
-
-3.2 To run one tests file run 'messages_api' shell run the following command:
-
-```
-python -m pytest tests/<test_file_name>
-```
-
-3.3 To run one test from a file run 'messages_api' shell run the following command:
+3. To run tests, in 'messages_api' shell RUN:
 
 ```
 python -m pytest tests/<test_file_name> -k <test_name>
 ```
+
+-k is optional.
