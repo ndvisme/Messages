@@ -27,6 +27,8 @@ class messageHandler():
         message_to_return = Message.query.filter_by(id=message_id).first()
         if message_to_return:
             return message_to_return
+        else:
+            return "message not found"
     
 
     def updateMessageDB(message_data, message_id):
@@ -40,7 +42,7 @@ class messageHandler():
             db.session.commit()
             return message_to_update
         else:
-            pass
+            return "message not found"
     
 
     def deleteMessageDB(message_id):
@@ -50,4 +52,4 @@ class messageHandler():
             db.session.commit()
             return message_to_delete
         else:
-            pass
+            return "message not found"
