@@ -1,0 +1,39 @@
+# Communicate with API
+Main route: "http://localhost:5051"
+```
+1. Create new message:
+    Route: "/message"
+    Method: POST
+    Input: {"user_id":<int>, "repeat":<string>, "dest_groups_id":<string>, "time_to_send":<DateTime>, "message_data":<string>, "message_title":<string>}
+    Output: On_Success- status code 201, {'created message': message details}
+            On_Failure- status code 500, {'error': 'error_message'} 
+
+2. Get message:
+    Route: "message/<id>" # Replace <id> with id of requested message
+    Method: GET
+    Input: None
+    Output: On_Success- status code 200, {'message': message details}
+            On_Failure- {
+                            1. status code 404, {'error': message not found'}
+                            2. status code 500, {'error': 'error_message'}
+                        }
+
+3. Update existing message:
+    Route: "message/<id>" # Replace <id> with id of requested message
+    Method: PUT
+    Input: {"user_id":<int>, "repeat":<string>, "dest_groups_id":<string>, "time_to_send":<DateTime>, "message_data":<string>, "message_title":<string>}
+    Output: On_Success- status code 200, {'message updated': message details}
+            On_Failure- {
+                            1. status code 404, {'error': message not found'}                            
+                            2. status code 500, {'error': 'error_message'}
+                        }
+
+4. Delete existing message:
+    Route: "message/<id>" # Replace <id> with id of requested message
+    Method: DELETE
+    Input: None
+    Output: On_Success- status code 200, {'message deleted': message details}
+            On_Failure- {
+                            1. status code 404, {'error': message not found'}                            
+                            2. status code 500, {'error': 'error_message'}
+                        }

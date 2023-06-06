@@ -43,7 +43,10 @@
    docker exec -it messages_api bash
    ```
 
-3. In 'messages_api' shell run the following command:
-   ```
-   python -m pytest
-   ```
+3. To run tests, in 'messages_api' shell RUN:
+
+```
+python -m pytest tests/<test_file_name> -k <test_name>
+```
+
+-k is optional.
